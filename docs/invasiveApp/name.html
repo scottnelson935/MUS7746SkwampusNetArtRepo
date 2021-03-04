@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>A User exists</title>
+    </head>
+    <body>
+        <h1 id='user'>no user</h1>
+
+        <script>
+            let userName = document.getElementById('user');
+            let storage = window.localStorage;
+            let name = storage.getItem('name');
+            if(userName.innerText === "no user" && !name) {
+                name = 'Bob Howdy' + Math.trunc(Math.random() *100)
+                storage.setItem('name', name);
+            }
+            userName.innerText = name;
+
+        </script>
+    </body>
+</html>
