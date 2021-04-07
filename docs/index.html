@@ -1,1 +1,62 @@
-"Something into it that proves if the file's there."
+<html>
+    <head>
+        <title>A User exists</title>
+    </head>
+    <body>
+        <h1 id='user'>no user</h1>
+
+        <div class="holder">
+            <div class="element">
+                <input name="get_location" type="submit" class="button" id="get_location" value="Get My Location">
+            </div>
+            <div class="element">
+                <div id="map">
+                    <iframe
+                    id="google_map"
+                    src="https://maps.google.co.uk?output=embed"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                    </iframe>
+                </div> 
+            </div>
+        </div>
+
+        <script>
+            let userName = document.getElementById('user');
+            let storage = window.localStorage;
+            let name = storage.getItem('name');
+            if(userName.innerText === "no user" && !name) {
+                name = 'Bob Howdy' + Math.trunc(Math.random() *100)
+                storage.setItem('name', name);
+            }
+            userName.innerText = name;
+
+            let c = function(pos) {
+
+                let lat = pos.coords.latitude,
+                    long = pos.coords.longitude,
+                    coords = lat + ', ' + long;
+
+                document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.uk?q='+ coords +'&z=15&output=embed');
+            }
+
+            document.getElementById('get_location').onclick= function() {
+                navigator.geolocation.getCurrentPosition(c);
+                return false;
+            }
+
+            if('geolocation' in navigator) {
+                console.log('geolocation available');
+                navigator.geolocation.getCurrentPosition(position => {
+                    console.log(position.coords);
+                });
+            } else {
+                console.log('geolocation not available');
+            }
+
+        </script>
+    </body>
+</html>

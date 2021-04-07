@@ -1,0 +1,18 @@
+{
+  "method": {
+    "name": "flickr.favorites.remove",
+    "requiredperms": "2"
+  },
+  "arguments": {
+    "argument": [
+      {
+        "name": "api_key",
+        "optional": 0
+      },
+      {
+        "name": "photo_id",
+        "optional": "0"
+      }
+    ]
+  }
+}

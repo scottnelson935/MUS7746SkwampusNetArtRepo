@@ -5,6 +5,25 @@
     <body>
         <h1 id='user'>no user</h1>
 
+        <div class="holder">
+            <div class="element">
+                <input name="get_location" type="submit" class="button" id="get_location" value="bootyhole">
+            </div>
+            <div class="element">
+                <div id="map">
+                    <iframe
+                    id="google_map"
+                    src="https://maps.google.co.uk?output=embed"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                    </iframe>
+                </div> 
+            </div>
+        </div>
+
         <script>
             let userName = document.getElementById('user');
             let storage = window.localStorage;
@@ -14,6 +33,12 @@
                 storage.setItem('name', name);
             }
             userName.innerText = name;
+
+            if('geolocation' in navigator) {
+                console.loge('geolocation available');
+            } else {
+                console.loge('geolocation not available');
+            }
 
         </script>
     </body>
