@@ -10,13 +10,18 @@ let lfo2;
 let lfo3;
 let lfo4;
 let lfo5;
-
+let noise;
+let autoFilter;
 
 let wave;
 
 // Create a new canvas to match the broswer size
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
+  noise = new Tone.Noise();
+  noise.toDestination().start();
+  noise.volume.value = -16;
 
   osc = new Tone.Oscillator(); //default 440 --> A4
   osc.frequency.value = 77.782;
@@ -77,7 +82,7 @@ function windowResized() {
 
 //Main render Loop
 function draw() {
-  background(0);
+  background(landscape);
 
   if (ready) {
     //do the audio stuff
@@ -120,6 +125,10 @@ function draw() {
     textAlign(CENTER, CENTER);
     text("CLICK TO START", width / 2, height / 2);
   }
+}
+
+function preload() {
+  landscape = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/everest.jpg");
 }
 
 function mousePressed() {

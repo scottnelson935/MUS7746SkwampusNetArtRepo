@@ -87,7 +87,7 @@ function windowResized() {
 
 //Main render Loop
 function draw() {
-    background(0);
+    background(landscape);
 
     if (ready) {
         //do the audio stuff
@@ -126,6 +126,10 @@ function draw() {
         textAlign(CENTER, CENTER);
         text("CLICK TO START", width / 2, height / 2);
     }
+}
+
+function preload() {
+    landscape = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/dancefloor.jpeg");
 }
 
 function mousePressed() {
