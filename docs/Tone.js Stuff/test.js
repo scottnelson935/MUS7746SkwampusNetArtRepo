@@ -1,3 +1,5 @@
+let ready = false;
+
 document.getElementById("toggle").addEventListener("click", async () => {
     await Tone.start();
     console.log("audio enabled");
@@ -21,10 +23,6 @@ class Instrument {
             if (this.synth) this.synth.triggerAttackRelease(note, "8n", time);
             this.tick++;
         }, "4n");
-
-        let notes2 = ;
-
-        let notes3 = ;
 
         //Tone.Transport.start();
     }
@@ -200,4 +198,13 @@ if ('geolocation' in navigator) {
     });
 } else {
     console.log('geolocation not available');
+}
+
+function mousePressed() {
+    if (!ready) { // ! --> not
+
+        Tone.start();
+        ready = true;
+    }
+
 }

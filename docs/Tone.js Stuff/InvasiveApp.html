@@ -1,7 +1,9 @@
-<div class="wrapper">
-    <h1>InvasiveApp</h1>
-    <header>"Don't Go There!".com 37-point questionnaire<sup font-weight=>TM</sup></header>
+<html>
+
+<head>
     <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sigmar+One">
     <title>sketch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -16,134 +18,77 @@
     <script src="https://raw.githubusercontent.com/tonaljs/tonal/master/packages/tonal/browser/tonal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.15/Tone.js"></script>
 
-    <script src="test.js"></script>
-    <nav>
-        <img src="https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/PH_DGT.jpeg">
-        <br>Social Media
-        </br>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate"
-            viewBox="0 0 160 100" width="160pt" height="100pt">
-            <defs>
-                <clipPath id="_clipPath_Skc2VOeetKfhjllHIdk1ST1t6B9EZxS7">
-                    <rect width="160" height="100" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#_clipPath_Skc2VOeetKfhjllHIdk1ST1t6B9EZxS7)">
-                <path
-                    d=" M 816.466 113.793 C 783.453 115.81 753.076 132.501 733.67 159.286 C 714.265 186.07 707.868 220.135 716.236 252.134 L 521.973 353.508 C 499.693 326.097 465.65 310.991 430.377 312.865 C 369.661 316.55 323.324 368.583 326.67 429.318 C 330.176 489.862 382.58 536.53 443.124 533.024 C 478.577 530.836 510.805 511.702 529.7 481.623 L 734.521 558.786 C 733.184 566.615 732.726 574.57 733.155 582.501 C 736.661 643.045 789.065 689.713 849.608 686.207 C 910.152 682.702 956.82 630.298 953.315 569.754 C 949.809 509.21 897.405 462.542 836.862 466.048 C 801.408 468.237 769.18 487.371 750.286 517.449 L 545.433 440.509 C 546.774 432.605 547.243 424.577 546.83 416.571 C 546.351 408.293 544.871 400.294 542.661 392.646 L 735.959 291.372 C 758.145 320.044 793.016 335.966 829.213 333.952 C 889.757 330.447 936.425 278.043 932.92 217.499 C 929.414 156.955 877.01 110.287 816.466 113.793 Z  M 819.016 157.824 C 855.827 155.693 886.757 183.238 888.888 220.048 C 891.019 256.859 863.475 287.789 826.664 289.92 C 809.118 291.055 791.849 285.111 778.718 273.417 C 765.587 261.724 757.69 245.256 756.792 227.696 C 754.661 190.886 782.205 159.956 819.016 157.824 Z  M 432.926 356.897 C 469.737 354.765 500.667 382.31 502.798 419.12 C 504.929 455.931 477.385 486.861 440.574 488.992 C 423.028 490.127 405.759 484.183 392.628 472.489 C 379.498 460.796 371.6 444.328 370.702 426.768 C 368.571 389.958 396.115 359.028 432.926 356.897 Z  M 839.411 510.08 C 876.222 507.949 907.152 535.493 909.283 572.304 C 911.414 609.114 883.87 640.044 847.059 642.176 C 829.513 643.31 812.244 637.366 799.113 625.673 C 785.982 613.979 778.085 597.512 777.187 579.952 C 775.056 543.141 802.6 512.211 839.411 510.08 Z "
-                    fill="rgb(0,0,0)" transform="translate(0,0)  scale(0.125 0.125)" />
-            </g>
-        </svg>Share to
-        <a href="https://theitcrowd.fandom.com/wiki/Friendface.com" target="_blank">
-            <img class="friendface"
-                src="data:image/jpeg;base64,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"
-                alt="Friendface" style="width:100px;height:100px;">
-        </a>
-    </nav>
-    <section>SECTION
-        <br>
-        <tr>
-            <td>
-                <label>Name</label>
-                <input type="text" name="fname" />
-            </td>
+
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+        <h1>An InvasiveApp<sup font-style="smaller">TM</sup>enterprise</h1>
+        <header>"Don't Go There!"<span style="color:aqua">.com</span>
+            <br>37-point questionnaire<sup font-weight=>TM</sup>
+        </header>
+
+        <nav>
+            <img class="ph" src="https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/PH_DGT.jpeg">
+            <br>Social Media:
             </br>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate"
+                viewBox="0 0 160 100" width="160pt" height="100pt">
+                <defs>
+                    <clipPath id="_clipPath_Skc2VOeetKfhjllHIdk1ST1t6B9EZxS7">
+                        <rect width="160" height="100" />
+                    </clipPath>
+                </defs>
+                <g clip-path="url(#_clipPath_Skc2VOeetKfhjllHIdk1ST1t6B9EZxS7)">
+                    <path
+                        d=" M 816.466 113.793 C 783.453 115.81 753.076 132.501 733.67 159.286 C 714.265 186.07 707.868 220.135 716.236 252.134 L 521.973 353.508 C 499.693 326.097 465.65 310.991 430.377 312.865 C 369.661 316.55 323.324 368.583 326.67 429.318 C 330.176 489.862 382.58 536.53 443.124 533.024 C 478.577 530.836 510.805 511.702 529.7 481.623 L 734.521 558.786 C 733.184 566.615 732.726 574.57 733.155 582.501 C 736.661 643.045 789.065 689.713 849.608 686.207 C 910.152 682.702 956.82 630.298 953.315 569.754 C 949.809 509.21 897.405 462.542 836.862 466.048 C 801.408 468.237 769.18 487.371 750.286 517.449 L 545.433 440.509 C 546.774 432.605 547.243 424.577 546.83 416.571 C 546.351 408.293 544.871 400.294 542.661 392.646 L 735.959 291.372 C 758.145 320.044 793.016 335.966 829.213 333.952 C 889.757 330.447 936.425 278.043 932.92 217.499 C 929.414 156.955 877.01 110.287 816.466 113.793 Z  M 819.016 157.824 C 855.827 155.693 886.757 183.238 888.888 220.048 C 891.019 256.859 863.475 287.789 826.664 289.92 C 809.118 291.055 791.849 285.111 778.718 273.417 C 765.587 261.724 757.69 245.256 756.792 227.696 C 754.661 190.886 782.205 159.956 819.016 157.824 Z  M 432.926 356.897 C 469.737 354.765 500.667 382.31 502.798 419.12 C 504.929 455.931 477.385 486.861 440.574 488.992 C 423.028 490.127 405.759 484.183 392.628 472.489 C 379.498 460.796 371.6 444.328 370.702 426.768 C 368.571 389.958 396.115 359.028 432.926 356.897 Z  M 839.411 510.08 C 876.222 507.949 907.152 535.493 909.283 572.304 C 911.414 609.114 883.87 640.044 847.059 642.176 C 829.513 643.31 812.244 637.366 799.113 625.673 C 785.982 613.979 778.085 597.512 777.187 579.952 C 775.056 543.141 802.6 512.211 839.411 510.08 Z "
+                        fill="rgb(0,0,0)" transform="translate(0,0)  scale(0.125 0.125)" />
+                </g>
+            </svg>
+            <a href="https://theitcrowd.fandom.com/wiki/Friendface.com" target="_blank"
+                style="text-decoration: none;">Share
+                to
+                <img class="friendface"
+                    src="https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/friendface.jpg"
+                    alt="Friendface" style="width:100px;height:30px; top:7px;">
+            </a>
+        </nav>
+        <section id="info">TELL US ABOUT YOURSELF!
             <br>
-            <td>
-                <label>Number</label>
-                <input type="text" name="lname" />
-            </td>
-        </tr>
-        </br>
-        <div class="element">
-            <input name="get_location" type="submit" class="button" id="get_location" value="Where are you?">
-        </div>
-        <div class="element">
-            <div id="map">
-                <iframe id="google_map" src="https://maps.google.co.uk?output=embed" width="600" height="450"
-                    style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+            <tr>
+                <td>
+                    <label>Full Name (including any and all middle names and/or aliases)</label>
+                    <input type="text" name="fname" />
+                </td>
+                </br>
+                <br>
+                <td>
+                    <label>Personal Phone Number (don't forget the area code!)</label>
+                    <input type="text" name="lname" />
+                </td>
+            </tr>
+            </br>
+            <div class="element">
+                <input name="get_location" type="submit" class="button" id="get_location"
+                    value="While you're at it, why don't you tell us where you are right now?">
             </div>
-        </div>
-    </section>
-</div>
-
-<div id="synth-div" class="wrapper hidden">
-    <section class="section">
-        <div class="field">
-            <label class="label">On your morning drive, you prefer listening to:</label>
-            <span class="select is-fullwidth">
-                <select id="synth-type">
-                    <option value="AMSynth" selected>AM Radio</option>
-                    <option value="FMSynth">FM Radio</option>
-                    <option value="Synth">the road</option>
-                </select>
-            </span>
-        </div>
-        <div class="field">
-            <label class="label">A good name for a pet cat is:</label>
-            <span class="select is-fullwidth">
-                <select id="oscillator-type">
-                    <option value="triangle" selected>Triangle Sandwiches</option>
-                    <option value="sawtooth">Sawtooth</option>
-                    <option value="sine">Sinewave</option>
-                    <option value="square">Squarenose</option>
-                </select>
-            </span>
-        </div>
-        <div class="field">
-            <label class="label">The correct serving size for Cheez-Its is:</label>
-            <span class="select is-fullwidth">
-                <select id="oscillator-partials">
-                    <option value="none">none</option>
-                    <option value="2">2</option>
-                    <option value="4" selected>4</option>
-                    <option value="8">8</option>
-                    <option value="16">16</option>
-                    <option value="32">32</option>
-                    <option value="64">64</option>
-                </select>
-            </span>
-        </div>
-
-        <div class="field">
-            <label class="label">How much coffee do you drink in a day?</label>
-            <div class="control">
-                <input id="envelope-attack" class="input is-fullwidth" value="1" min="0" max="9" step="1"
-                    type="range" />
+            <div class="element">
+                <div id="map">
+                    <iframe id="google_map" src="https://maps.google.co.uk?output=embed" width="600" height="450"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <label>Great! Thanks so much!
+                    <br>Press the button below to start the questionnaire:</label>
+                <br><a href="questions_pg1.html"><button>Questionnaire!</button></a>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Your monthly budget for balloons?</label>
-            <div class="control">
-                <input id="envelope-decay" class="input is-fullwidth" value="1" min="0" max="9" step="1" type="range" />
-            </div>
-        </div>
+        </section>
+    </div>
+    <script src="test.js"></script>
+</body>
 
-        <div class="field">
-            <label class="label">Monthly budget for pins to pop the balloons?</label>
-            <div class="control">
-                <input id="envelope-sustain" class="input is-fullwidth" value="4" min="0" max="9" step="1"
-                    type="range" />
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">On a scale of 1-10, do you fill your balloons with your excess coffee, yes or
-                no?</label>
-            <div class="control">
-                <input id="envelope-release" class="input is-fullwidth" value="1" min="0" max="9" step="1"
-                    type="range" />
-            </div>
-        </div>
-
-        <div class="field">
-            <button class="button is-success" id="toggle">
-                <span>Play</span>
-                <span>Pause</span>
-            </button>
-        </div>
-    </section>
-    </span>
-</div>
+</html>
