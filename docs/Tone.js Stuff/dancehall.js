@@ -1,7 +1,7 @@
 let ready = false;
 
 let loopBeat;
-let bassSynth, cymbalSynth;
+let kickSynth, cymbalSynth, bassSynth, keySynth;
 let counter;
 
 let wave;
@@ -12,7 +12,23 @@ function setup() {
 
     counter = 0;
 
-    bassSynth = new Tone.MembraneSynth().toMaster();
+    kickSynth = new Tone.MembraneSynth().toMaster();
+
+    bassSynth = new Tone.FMSynth({
+        envelope: {
+            attack: 0.02,
+            decay: 0.1,
+            sustain: 0.2,
+            release: 0.01
+        },
+        harmonicity: 3.1,
+        modulationIndex: 16,
+        resonance: 8000,
+        octaves: 0.5
+    }).toMaster();
+
+    keySynth = new Tone.PolySynth().toMaster();
+
     cymbalSynth = new Tone.MetalSynth({
         frequency: 250,
         envelope: {
@@ -24,11 +40,13 @@ function setup() {
         modulationIndex: 16,
         resonance: 8000,
         octaves: 0.5
-    }
-    ).toMaster();
+    }).toMaster();
+
+    cymbalSynth.volume.value = -24;
+    keySynth.volume.value = -9;
 
     loopBeat = new Tone.Loop(song, '4n');
-    Tone.Transport.bpm.value = 140;
+    Tone.Transport.bpm.value = 350;
     Tone.Transport.start();
     loopBeat.start(0);
 
@@ -41,9 +59,21 @@ function setup() {
 function song(time) {
 
     if (counter % 4 === 0) {
-        bassSynth.triggerAttackRelease('F#3', '8n', time, 1)
-
+        kickSynth.triggerAttackRelease('C#2', '8n', time, 1)
     }
+
+    if (counter % 4 === 2) {
+        kickSynth.triggerAttackRelease('C#2', '8n', time, 0.6)
+    }
+
+    if (counter % 4 !== 0) {
+        bassSynth.triggerAttackRelease('C#2', '8n', time, 1)
+    }
+
+    if (counter % 4 === 2) {
+        keySynth.triggerAttackRelease(['C#3', 'G#3', 'B3', 'E4'], '8n', time, 1)
+    }
+
     if (counter % 4 !== 1) {
         cymbalSynth.triggerAttackRelease('F#4', '16n', time, 0.3);
     }

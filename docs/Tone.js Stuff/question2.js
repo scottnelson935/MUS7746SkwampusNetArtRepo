@@ -1,14 +1,9 @@
 let ready = false;
 
-function mousePressed() {
-    if (!ready) { // ! --> not
-        Tone.start();
-        ready = true;
-    }
-}
-
-let player = new Tone.Player("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/SpanishFleaMidi.mp3").toDestination();
-player.autostart = true;
+document.getElementById("toggle").addEventListener("click", async () => {
+    await Tone.start();
+    console.log("audio enabled");
+});
 
 class Instrument {
     constructor() {
@@ -205,3 +200,11 @@ if ('geolocation' in navigator) {
     console.log('geolocation not available');
 }
 
+function mousePressed() {
+    if (!ready) { // ! --> not
+
+        Tone.start();
+        ready = true;
+    }
+
+}
