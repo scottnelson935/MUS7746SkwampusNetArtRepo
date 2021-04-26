@@ -72,6 +72,18 @@ div.wrapper nav div.sharesvg a {
     vertical-align: middle;
 }
 
+div.wrapper nav div.sharesvg .expedia {
+    display: inline-block;
+    text-align: center;
+    max-width: 150px;
+}
+
+div.wrapper nav div.sharsvg .expedia img {
+    display: inline-block;
+    width: 5px;
+    height: auto;
+}
+
 div.wrapper nav .ph {
     width: 420px;
     height: auto;
@@ -90,7 +102,7 @@ div.wrapper #nav2 h2 {
 }
 
 div.wrapper #nav2 {
-    margin-top: -450px;
+    margin-top: -250px;
     height: 70%;
 }
 
@@ -227,7 +239,7 @@ div.wrapper nav, div.wrapper section {
 }
 
 div.wrapper nav {
-    height: 60%;
+    height: 80%;
 }
 
     
