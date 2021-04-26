@@ -12,8 +12,10 @@ function mousePressed() {
     }
 }
 
-let player = new Tone.Player("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/SpanishFleaMidi.mp3").toDestination();
+let player = new Tone.Player("https://netart.skwampus.com/assets/nightflymidi.mp3").toDestination();
 player.autostart = true;
+
+Tone.Master.volume.value = -6;
 
 class Instrument {
     constructor() {

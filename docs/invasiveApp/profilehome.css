@@ -1,5 +1,5 @@
 .button {
-    border:solid rgb(129, 0, 0) 2px;
+    border:solid rgb(0, 78, 10) 2px;
     background-color: rgb(252, 210, 210);
     font-family: georgia, serif;
     font-size: 24px;
@@ -51,7 +51,7 @@ body {
     font-family: Helvetica;
     text-align: center;
     margin: 0;
-    border: solid rgb(192, 9, 9) 4px;
+    border: solid rgb(0, 105, 14) 4px;
 }
 div.gallery {
     margin: 5px;
