@@ -75,13 +75,17 @@ div.wrapper nav div.sharesvg a {
 div.wrapper nav div.sharesvg .expedia {
     display: inline-block;
     text-align: center;
-    /* width: 150px; */
+    width: 200px;
 }
 
-div.wrapper nav div.sharsvg .expedia img {
+#expedia {
     display: inline-block;
-    width: 10px;
+    max-width: 100px;
     height: auto;
+}
+
+#com {
+    vertical-align: 10%;
 }
 
 div.wrapper nav .ph {

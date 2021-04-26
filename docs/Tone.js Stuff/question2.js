@@ -180,29 +180,43 @@ function update() {
 let attSlider = document.getElementById("envelope-attack");
 let attValue = document.getElementById("attack-value");
 attSlider.onchange = () => {
-  attValue.value = attSlider.value
-  console.log(attSlider.value);
+    attValue.value = attSlider.value
+    console.log(attSlider.value);
 }
 
 let decSlider = document.getElementById("envelope-decay");
 let decValue = document.getElementById("decay-value");
 decSlider.onchange = () => {
-  decValue.value = decSlider.value
-  console.log(decSlider.value);
+    decValue.value = decSlider.value
+    console.log(decSlider.value);
 }
 
 let susSlider = document.getElementById("envelope-sustain");
 let susValue = document.getElementById("sustain-value");
 susSlider.onchange = () => {
-  susValue.value = susSlider.value
-  console.log(susSlider.value);
+    susValue.value = susSlider.value
+    console.log(susSlider.value);
 }
 
 let relSlider = document.getElementById("envelope-release");
 let relValue = document.getElementById("release-value");
 relSlider.onchange = () => {
-  relValue.value = relSlider.value
-  console.log(relSlider.value);
+    relValue.value = relSlider.value
+    console.log(relSlider.value);
+}
+
+//random url results//
+
+var urlArray = [
+    "dancehall.html",
+    "static.html",
+    "everest.html",
+];
+
+function randomUrl() {
+    var randomNumber = Math.floor(Math.random() * urlArray.length);
+    var newUrl = urlArray[randomNumber];
+    window.location.href = newUrl;
 }
 
 // //Geolocation//
