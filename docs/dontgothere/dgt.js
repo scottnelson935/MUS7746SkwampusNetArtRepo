@@ -12,7 +12,7 @@ function mousePressed() {
     }
 }
 
-let player = new Tone.Player("https://netart.skwampus.com/assets/nightflymidi.mp3").toDestination();
+let player = new Tone.Player("https://netart.skwampus.com/assets/SpanishFleaMidi.mp3").toDestination();
 player.autostart = true;
 
 Tone.Master.volume.value = -6;
