@@ -177,34 +177,62 @@ function update() {
     );
 }
 
-//Geolocation//
-
-let c = function (pos) {
-    let lat = pos.coords.latitude,
-        long = pos.coords.longitude,
-        coords = lat + ', ' + long;
-    document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.uk?q=' + coords + '&z=15&output=embed');
+let attSlider = document.getElementById("envelope-attack");
+let attValue = document.getElementById("attack-value");
+attSlider.onchange = () => {
+  attValue.value = attSlider.value
+  console.log(attSlider.value);
 }
 
-document.getElementById('get_location').onclick = function () {
-    navigator.geolocation.getCurrentPosition(c);
-    return false;
+let decSlider = document.getElementById("envelope-decay");
+let decValue = document.getElementById("decay-value");
+decSlider.onchange = () => {
+  decValue.value = decSlider.value
+  console.log(decSlider.value);
 }
 
-if ('geolocation' in navigator) {
-    console.log('geolocation available');
-    navigator.geolocation.getCurrentPosition(position => {
-        console.log(position.coords);
-    });
-} else {
-    console.log('geolocation not available');
+let susSlider = document.getElementById("envelope-sustain");
+let susValue = document.getElementById("sustain-value");
+susSlider.onchange = () => {
+  susValue.value = susSlider.value
+  console.log(susSlider.value);
 }
 
-function mousePressed() {
-    if (!ready) { // ! --> not
-
-        Tone.start();
-        ready = true;
-    }
-
+let relSlider = document.getElementById("envelope-release");
+let relValue = document.getElementById("release-value");
+relSlider.onchange = () => {
+  relValue.value = relSlider.value
+  console.log(relSlider.value);
 }
+
+// //Geolocation//
+
+// let c = function (pos) {
+//     let lat = pos.coords.latitude,
+//         long = pos.coords.longitude,
+//         coords = lat + ', ' + long;
+//     document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.uk?q=' + coords + '&z=15&output=embed');
+// }
+
+// document.getElementById('get_location').onclick = function () {
+//     navigator.geolocation.getCurrentPosition(c);
+//     return false;
+// }
+
+// if ('geolocation' in navigator) {
+//     console.log('geolocation available');
+//     navigator.geolocation.getCurrentPosition(position => {
+//         console.log(position.coords);
+//     });
+// } else {
+//     console.log('geolocation not available');
+// }
+
+// function mousePressed() {
+//     if (!ready) { // ! --> not
+
+//         Tone.start();
+//         ready = true;
+//     }
+
+// }

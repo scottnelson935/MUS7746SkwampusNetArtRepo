@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="camerastyle.css">
+    <title>InvasiveApp ProfilePic</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-wrap">
+        <span id="profpic">Let's set up your profile pic!</span>
+        <br>
+        <video id="video" playsinline autoplay></video>
+    </div>
+
+    <div class="controller">
+        <button id="snap" onclick="show_hide()">Capture</button>
+    </div>
+    <div class="captured">
+        <span id="nailed" class="invisible">Nailed it - first try! Around here we call that a one-take-Jake!</span>
+    </div>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <div>
+        <a href="displayprofilepic.html"><button id="picbutton">See your profile pic!</button></a>
+    </div>
+    <script src="profilepic.js"></script>
+</body>
+
+</html>

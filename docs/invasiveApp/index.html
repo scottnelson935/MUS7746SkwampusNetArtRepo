@@ -1,45 +1,42 @@
 <html>
-    <head>
-        <title>A User exists</title>
-    </head>
-    <body>
-        <h1 id='user'>no user</h1>
 
-        <div class="holder">
-            <div class="element">
-                <input name="get_location" type="submit" class="button" id="get_location" value="bootyhole">
-            </div>
-            <div class="element">
-                <div id="map">
-                    <iframe
-                    id="google_map"
-                    src="https://maps.google.co.uk?output=embed"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy">
-                    </iframe>
-                </div> 
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>InvasiveApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src="https://raw.githubusercontent.com/tonaljs/tonal/master/packages/tonal/browser/tonal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.15/Tone.js"></script>
+</head>
+
+<body>
+    <div class="holder">
+        <h1 id='user'>no user</h1>
+        Welcome to 
+        <header>InvasiveApp<sup>TM</sup>!
+        </header>
+        <a href="bio.html"><button id='user'>Not your profile? Click here</button></a>
+        <br>
+        <br>
+        <div class="element">
+            <input name="get_location" type="submit" class="button" id="get_location" value="Click here to show us where you are!">
+        </div>
+        <div class="element">
+            <div id="map">
+                <iframe id="google_map" src="https://maps.google.co.uk?output=embed" width="600" height="450"
+                    style="border:1;" allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
         </div>
+    </div>
 
-        <script>
-            let userName = document.getElementById('user');
-            let storage = window.localStorage;
-            let name = storage.getItem('name');
-            if(userName.innerText === "no user" && !name) {
-                name = 'Bob Howdy' + Math.trunc(Math.random() *100)
-                storage.setItem('name', name);
-            }
-            userName.innerText = name;
+    <script src="InvasiveApp.js"></script>
+</body>
 
-            if('geolocation' in navigator) {
-                console.loge('geolocation available');
-            } else {
-                console.loge('geolocation not available');
-            }
-
-        </script>
-    </body>
 </html>

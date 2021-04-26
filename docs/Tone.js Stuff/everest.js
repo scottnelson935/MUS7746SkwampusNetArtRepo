@@ -55,9 +55,9 @@ function setup() {
 
     Tone.Master.volume.value = -6;
 
-    image(landscape, 0, 0);
-    tint(255, 0, 228, 126); // Tint
-    image(landscape, 50, 0);
+    // image(landscape, 0, 0);
+    // tint(255, 0, 228, 126); // Tint
+    // image(landscape, 50, 0);
 }
 
 function song(time) {
@@ -133,7 +133,7 @@ function draw() {
 }
 
 function preload() {
-    landscape = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/dancefloor.jpeg");
+    landscape = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/everest.jpg");
 }
 
 function mousePressed() {

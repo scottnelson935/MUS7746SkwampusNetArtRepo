@@ -18,6 +18,7 @@ let wave;
 // Create a new canvas to match the broswer size
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background(0);
 
   noise = new Tone.Noise();
   noise.toDestination().start();
@@ -82,7 +83,7 @@ function windowResized() {
 
 //Main render Loop
 function draw() {
-  background(landscape);
+  gif_createImg.position(100, 100);
 
   if (ready) {
     //do the audio stuff
@@ -128,7 +129,8 @@ function draw() {
 }
 
 function preload() {
-  landscape = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/everest.jpg");
+  gif_static = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/static.gif");
+  gif_createImg = createImg("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/static.gif")
 }
 
 function mousePressed() {

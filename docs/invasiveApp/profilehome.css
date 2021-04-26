@@ -1,0 +1,90 @@
+.button {
+    border:solid rgb(129, 0, 0) 2px;
+    background-color: rgb(252, 210, 210);
+    font-family: georgia, serif;
+    font-size: 24px;
+}
+
+.holder {
+    width: 95%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+
+
+header sup {
+    font-size: xx-small;
+}
+
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30;
+    color:rgb(0, 122, 230);
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(35, 0, 117);
+}
+
+
+
+header {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:italic;
+    font-size: 48;
+    color:rgb(0, 122, 230);
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(35, 174, 255), rgb(49, 0, 139));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(42, 0, 139);
+}
+
+body {
+    background-image: linear-gradient(#dbffc7, #97b123);
+    background-size: 100% 125%;
+    background-repeat: no-repeat;
+    color: #000;
+    font-family: Helvetica;
+    text-align: center;
+    margin: 0;
+    border: solid rgb(192, 9, 9) 4px;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid rgb(76, 90, 66);
+    display: inline-block;
+    width: 180px;
+    margin-top: 20px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid rgb(255, 166, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  div.pics {
+    text-align: center;
+  }
+
+  div.profilepicsmall img {
+    float: left;
+    width: 20%;
+    border: solid rgb(45, 131, 5) 2px;
+    border-radius: 50%;
+    margin-left: 25px;
+    /* padding-right: 25px; */
+  }

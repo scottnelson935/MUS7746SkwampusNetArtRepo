@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="questions1.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sigmar+One">
     <title>Questions pg.1</title>
@@ -9,6 +9,7 @@
     <style>
         body {
             padding: 0;
+            padding-top: 5%;
             margin: 0;
         }
     </style>
@@ -68,35 +69,34 @@
             <div class="field">
                 <label class="label">How much coffee do you drink in a day?</label>
                 <div class="control">
-                    <input id="envelope-attack" class="input is-fullwidth" value="1" min="0" max="9" step="1"
-                        type="range" />
+                  <input id="envelope-attack" class="input is-fullwidth" value="1" min="0" max="9" step="1" type="range"/>
+                  <input type="number" id="attack-value" min="1" max="10" placeholder="1"></input>
                 </div>
-            </div>
-
-            <div class="field">
+              </div>
+          
+              <div class="field">
                 <label class="label">Your monthly budget for balloons?</label>
                 <div class="control">
-                    <input id="envelope-decay" class="input is-fullwidth" value="1" min="0" max="9" step="1"
-                        type="range" />
+                  <input id="envelope-decay" class="input is-fullwidth" value="1" min="0" max="9" step="1" type="range" />
+                  <input type="number" id="decay-value" min="1" max="10" placeholder="1"></input>
                 </div>
-            </div>
-
-            <div class="field">
+              </div>
+          
+              <div class="field">
                 <label class="label">Monthly budget for pins to pop the balloons?</label>
                 <div class="control">
-                    <input id="envelope-sustain" class="input is-fullwidth" value="4" min="0" max="9" step="1"
-                        type="range" />
+                  <input id="envelope-sustain" class="input is-fullwidth" value="4" min="0" max="9" step="1" type="range" />
+                  <input type="number" id="sustain-value" min="1" max="10" placeholder="4"></input>
                 </div>
-            </div>
-
-            <div class="field">
-                <label class="label">On a scale of 1-10, do you fill your balloons with your excess coffee, yes or
-                    no?</label>
+              </div>
+          
+              <div class="field">
+                <label class="label">On a scale of 1-10, do you fill your balloons with your excess coffee, yes or no?</label>
                 <div class="control">
-                    <input id="envelope-release" class="input is-fullwidth" value="1" min="0" max="9" step="1"
-                        type="range" />
+                  <input id="envelope-release" class="input is-fullwidth" value="1" min="1" max="10" step="1" type="range" />
+                  <input type="number" id="release-value" min="1" max="10" placeholder="yes/no"></input>
                 </div>
-            </div>
+              </div>
 
             <br><a href="dancehall.html"><button>Results!</button></a>
         </section>

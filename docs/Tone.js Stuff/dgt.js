@@ -1,9 +1,14 @@
 let ready = false;
 
+function setup() {
+    createCanvas(1, 1)
+}
+
 function mousePressed() {
     if (!ready) { // ! --> not
         Tone.start();
         ready = true;
+        console.log("readyload");
     }
 }
 
@@ -139,28 +144,28 @@ let s = document.getElementById("synth-div");
 
 let steps = [0, 0.001, 0.005, 0.01, 0.05, 0.1, 0.125, 0.25, 0.5, 0.75];
 
-$envelopeAttack.addEventListener('change', update);
-$envelopeDecay.addEventListener('change', update);
-$envelopeSustain.addEventListener('change', update);
-$envelopeRelease.addEventListener('change', releaseChange);
+// $envelopeAttack.addEventListener('change', update);
+// $envelopeDecay.addEventListener('change', update);
+// $envelopeSustain.addEventListener('change', update);
+// $envelopeRelease.addEventListener('change', releaseChange);
 
-$toggle.addEventListener('click', e => {
-    inst.toggle();
-    if ($toggle.className.match('is-success')) {
-        $toggle.classList.remove('is-success');
-        $toggle.classList.add('is-danger');
-    } else {
-        $toggle.classList.add('is-success');
-        $toggle.classList.remove('is-danger');
-    }
-    $toggle.classList.toggle('active');
-});
+// $toggle.addEventListener('click', e => {
+//     inst.toggle();
+//     if ($toggle.className.match('is-success')) {
+//         $toggle.classList.remove('is-success');
+//         $toggle.classList.add('is-danger');
+//     } else {
+//         $toggle.classList.add('is-success');
+//         $toggle.classList.remove('is-danger');
+//     }
+//     $toggle.classList.toggle('active');
+// });
 
-inst._updateSynthType($synthType.value);
+// inst._updateSynthType($synthType.value);
 
-$synthType.addEventListener('change', update);
-$oscillatorType.addEventListener('change', update);
-$oscillatorPartials.addEventListener('change', update);
+// $synthType.addEventListener('change', update);
+// $oscillatorType.addEventListener('change', update);
+// $oscillatorPartials.addEventListener('change', update);
 
 function releaseChange() {
     let notes = notes2;
@@ -184,23 +189,22 @@ function update() {
 
 //Geolocation//
 
-let c = function (pos) {
+let cloc = function (pos) {
     let lat = pos.coords.latitude,
         long = pos.coords.longitude,
         coords = lat + ', ' + long;
     document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.uk?q=' + coords + '&z=15&output=embed');
+    console.log(coords);
 }
 
-document.getElementById('get_location').onclick = function () {
-    navigator.geolocation.getCurrentPosition(c);
+document.getElementById('get_location').onclick = () => {
+    navigator.geolocation.getCurrentPosition(cloc);
+    console.log("nope");
     return false;
 }
 
 if ('geolocation' in navigator) {
     console.log('geolocation available');
-    navigator.geolocation.getCurrentPosition(position => {
-        console.log(position.coords);
-    });
 } else {
     console.log('geolocation not available');
 }
