@@ -4,6 +4,35 @@
     
 }
     
+#player table, tr, th, td {
+    font-size: 40px;
+    font-style: italic;
+    font-family: American Typewriter;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+h4 {
+    font-size: 40px;
+    font-style: italic;
+    font-family: American Typewriter;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(247, 217, 85), rgb(245, 156, 73));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.75px darkred;
+}
+
+p sup {
+    font-size:xx-small;
+}
+
+
+#why {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 svg {
     display: inline-block;
     width: 10%;
