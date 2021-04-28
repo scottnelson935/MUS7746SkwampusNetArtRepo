@@ -211,7 +211,8 @@ var urlArray = [
     "dancehall.html",
     "static.html",
     "everest.html",
-    "discocar.html"
+    "discocar.html",
+    "dip.html"
 ];
 
 function randomUrl() {

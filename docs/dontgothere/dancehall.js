@@ -92,6 +92,8 @@ function windowResized() {
 //Main render Loop
 function draw() {
     background(landscape);
+    // imageMode(CENTER);
+    // image(landscape, width / 2, height / 2)
 
     if (ready) {
         //do the audio stuff
@@ -133,7 +135,7 @@ function draw() {
 }
 
 function preload() {
-    landscape = loadImage("https://scottnelson935.github.io/MUS7746SkwampusNetArtRepo/assets/dancefloor.jpeg");
+    landscape = loadImage("https://netart.skwampus.com/assets/dancefloor.jpeg");
 }
 
 function mousePressed() {

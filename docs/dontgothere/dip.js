@@ -33,7 +33,8 @@ function mousePressed() {
     }
 }
 
-let player = new Tone.Player("https://netart.skwampus.com/assets/nightflymidi.mp3").toDestination();
+let player = new Tone.Player("https://netart.skwampus.com/assets/gulps.mp3").toDestination();
+player.loop = true;
 player.autostart = true;
 
 let wave;
@@ -231,7 +232,7 @@ function draw() {
 }
 
 function preload() {
-    landscape = loadImage("https://netart.skwampus.com/assets/wagon.jpeg");
+    landscape = loadImage("https://netart.skwampus.com/assets/dip.jpeg");
 }
 
 function mousePressed() {
