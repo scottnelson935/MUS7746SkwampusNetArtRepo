@@ -2,7 +2,7 @@
     border:solid rgb(129, 0, 0) 2px;
     background-color: rgb(252, 210, 210);
     font-family: georgia, serif;
-    font-size: 24px;
+    font-size: 1em;
 }
 
 .holder {
@@ -43,6 +43,11 @@ header {
     -webkit-text-stroke: 1px rgb(42, 0, 139);
 }
 
+#google_map {
+    width: 600;
+    height: 450;
+}
+
 body {
     background-image: linear-gradient(#faf284, #dba800);
     background-size: 100% 125%;
@@ -81,4 +86,96 @@ textarea {
 textarea:focus {
     border-color: dodgerBlue;
     box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+@media only screen and (max-width: 600px) {
+    .button {
+        border:solid rgb(129, 0, 0) 2px;
+        background-color: rgb(252, 210, 210);
+        font-family: georgia, serif;
+        font-size: 1em;
+    }
+    
+    .holder {
+        width: 95%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    
+    p {
+        color: pink;
+    }
+    
+    
+    
+    header sup {
+        font-size: xx-small;
+    }
+    
+    h1 {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 30;
+        color:rgb(0, 122, 230);
+        font-weight: bold;
+        -webkit-text-stroke: 1px rgb(35, 0, 117);
+    }
+    
+    
+    
+    header {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-style:italic;
+        font-size: 2.5em;
+        color:rgb(0, 122, 230);
+        font-weight: bold;
+        background: -webkit-linear-gradient(rgb(35, 174, 255), rgb(49, 0, 139));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px rgb(42, 0, 139);
+    }
+    
+    #google_map {
+        width: 250;
+        height: 200;
+    }
+    
+    body {
+        background-image: linear-gradient(#faf284, #dba800);
+        background-size: 100% 125%;
+        background-repeat: no-repeat;
+        color: #000;
+        font-family: Helvetica;
+        text-align: center;
+        margin: 0;
+        border: solid rgb(192, 9, 9) 4px;
+    }
+    
+    input {
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        margin: 8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    
+    input:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
+    
+    textarea {
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        margin: 8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        vertical-align: middle;
+    }
+    
+    textarea:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+    }
 }
