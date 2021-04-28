@@ -10,20 +10,31 @@ let ready = false;
 // let lfo3;
 // let lfo4;
 // let lfo5;
-let noise;
-let autoFilter;
+// let noise;
+// let autoFilter;
 
-let noise2;
-let autoFilter2;
+// let noise2;
+// let autoFilter2;
 
-let noise3;
-let autoFilter3;
+// let noise3;
+// let autoFilter3;
 
-let noise4;
-let autoFilter4;
+// let noise4;
+// let autoFilter4;
 
-let noise5;
-let autoFilter5;
+// let noise5;
+// let autoFilter5;
+
+function mousePressed() {
+    if (!ready) { // ! --> not
+        Tone.start();
+        ready = true;
+        console.log("readyload");
+    }
+}
+
+let player = new Tone.Player("https://netart.skwampus.com/assets/graceland.mp3").toDestination();
+player.autostart = true;
 
 let wave;
 
@@ -31,65 +42,65 @@ let wave;
 function setup() {
     createCanvas(windowWidth, windowHeight);
 
-    noise = new Tone.Noise("pink").start();
-    // noise.toDestination().start();
-    // noise.volume.value = -16;
+    // noise = new Tone.Noise("pink").start();
+    // // noise.toDestination().start();
+    // // noise.volume.value = -16;
 
-    autoFilter = new Tone.AutoFilter({
-        frequency: "0.01n",
-        baseFrequency: 200,
-        octaves: 3
-    }).toDestination().start();
+    // autoFilter = new Tone.AutoFilter({
+    //     frequency: "0.01n",
+    //     baseFrequency: 200,
+    //     octaves: 3
+    // }).toDestination().start();
 
-    noise.connect(autoFilter);
+    // noise.connect(autoFilter);
 
-    noise2 = new Tone.Noise("white").start();
-    // noise.toDestination().start();
-    // noise.volume.value = -16;
+    // noise2 = new Tone.Noise("white").start();
+    // // noise.toDestination().start();
+    // // noise.volume.value = -16;
 
-    autoFilter2 = new Tone.AutoFilter({
-        frequency: "0.02n",
-        baseFrequency: 100,
-        octaves: 3
-    }).toDestination().start();
+    // autoFilter2 = new Tone.AutoFilter({
+    //     frequency: "0.02n",
+    //     baseFrequency: 100,
+    //     octaves: 3
+    // }).toDestination().start();
 
-    noise2.connect(autoFilter2);
+    // noise2.connect(autoFilter2);
 
-    noise3 = new Tone.Noise("brown").start();
-    // noise.toDestination().start();
-    // noise.volume.value = -16;
+    // noise3 = new Tone.Noise("brown").start();
+    // // noise.toDestination().start();
+    // // noise.volume.value = -16;
 
-    autoFilter3 = new Tone.AutoFilter({
-        frequency: "0.03n",
-        baseFrequency: 125,
-        octaves: 2
-    }).toDestination().start();
+    // autoFilter3 = new Tone.AutoFilter({
+    //     frequency: "0.03n",
+    //     baseFrequency: 125,
+    //     octaves: 2
+    // }).toDestination().start();
 
-    noise3.connect(autoFilter3);
+    // noise3.connect(autoFilter3);
 
-    noise4 = new Tone.Noise("white").start();
-    // noise.toDestination().start();
-    // noise.volume.value = -16;
+    // noise4 = new Tone.Noise("white").start();
+    // // noise.toDestination().start();
+    // // noise.volume.value = -16;
 
-    autoFilter4 = new Tone.AutoFilter({
-        frequency: "0.04n",
-        baseFrequency: 175,
-        octaves: 3.5
-    }).toDestination().start();
-    noise4.connect(autoFilter4);
-    autoFilter4.type = "triangle29";
+    // autoFilter4 = new Tone.AutoFilter({
+    //     frequency: "0.04n",
+    //     baseFrequency: 175,
+    //     octaves: 3.5
+    // }).toDestination().start();
+    // noise4.connect(autoFilter4);
+    // autoFilter4.type = "triangle29";
 
-    noise5 = new Tone.Noise("white").start();
-    // noise.toDestination().start();
-    // noise.volume.value = -16;
+    // noise5 = new Tone.Noise("white").start();
+    // // noise.toDestination().start();
+    // // noise.volume.value = -16;
 
-    autoFilter5 = new Tone.AutoFilter({
-        frequency: "0.06n",
-        baseFrequency: 75,
-        octaves: 3
-    }).toDestination().start();
-    noise5.connect(autoFilter5);
-    autoFilter4.type = "triangle14";
+    // autoFilter5 = new Tone.AutoFilter({
+    //     frequency: "0.06n",
+    //     baseFrequency: 75,
+    //     octaves: 3
+    // }).toDestination().start();
+    // noise5.connect(autoFilter5);
+    // autoFilter4.type = "triangle14";
 
     // autoFilter.start();
 
@@ -220,13 +231,7 @@ function draw() {
 }
 
 function preload() {
-    landscape = loadImage("https://netart.skwampus.com/assets/everest.jpg");
-}
-
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-    print("resizing to: " + windowWidth + " " + windowHeight);
+    landscape = loadImage("https://netart.skwampus.com/assets/graceland.jpeg");
 }
 
 function mousePressed() {

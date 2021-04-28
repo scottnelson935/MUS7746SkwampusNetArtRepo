@@ -212,7 +212,8 @@ var urlArray = [
     "static.html",
     "everest.html",
     "discocar.html",
-    "dip.html"
+    "dip.html",
+    "graceland.html"
 ];
 
 function randomUrl() {
