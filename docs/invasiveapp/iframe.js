@@ -8,7 +8,7 @@ function mousePressed() {
     }
 }
 
-let player = new Tone.Player("https://netart.skwampus.com/assets/gulps.mp3").toDestination();
+let player = new Tone.Player("https://netart.skwampus.com/assets/upright.mp3").toDestination();
 player.loop = true;
 player.autostart = true;
 
