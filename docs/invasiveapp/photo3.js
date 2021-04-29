@@ -1,3 +1,4 @@
+Tone.Master.volume.value = -6;
 let ready = false;
 
 function mousePressed() {
@@ -20,14 +21,12 @@ window.addEventListener('focus', function () {
     Tone.Transport.start();
 }, true);
 
-let player = new Tone.Player("https://netart.skwampus.com/assets/californiadreamin.mp3").toDestination();
+let player = new Tone.Player("https://netart.skwampus.com/assets/hyestr.mp3").toDestination();
 player.autostart = true;
 
 player.sync().start(0);
 
 let wave;
-
-Tone.Master.volume.value = -6;
 
 function mousePressed() {
     if (!ready) { // ! --> not

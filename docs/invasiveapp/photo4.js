@@ -1,3 +1,4 @@
+Tone.Master.volume.value = -6;
 let ready = false;
 
 function mousePressed() {
@@ -29,7 +30,6 @@ player.sync().start(0);
 
 let wave;
 
-Tone.Master.volume.value = -6;
 
 function mousePressed() {
     if (!ready) { // ! --> not

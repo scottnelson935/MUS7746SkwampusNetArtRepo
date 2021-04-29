@@ -1,3 +1,4 @@
+Tone.Master.volume.value = -6;
 let ready = false;
 
 function mousePressed() {

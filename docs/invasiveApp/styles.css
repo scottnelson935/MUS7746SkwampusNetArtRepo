@@ -1,8 +1,9 @@
-.button {
+button, .button {
     border:solid rgb(129, 0, 0) 2px;
     background-color: rgb(252, 210, 210);
     font-family: georgia, serif;
     font-size: 1em;
+    margin: 3px;
 }
 
 .holder {
@@ -89,11 +90,12 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 600px) {
-    .button {
+    button, .button {
         border:solid rgb(129, 0, 0) 2px;
         background-color: rgb(252, 210, 210);
         font-family: georgia, serif;
         font-size: 1em;
+        margin: 2px;
     }
     
     .holder {
