@@ -20,7 +20,7 @@ window.addEventListener('focus', function () {
     Tone.Transport.start();
 }, true);
 
-let player = new Tone.Player("https://netart.skwampus.com/assets/californiadreamin.mp3").toDestination();
+let player = new Tone.Player("https://netart.skwampus.com/assets/sulk.mp3").toDestination();
 player.autostart = true;
 
 player.sync().start(0);
