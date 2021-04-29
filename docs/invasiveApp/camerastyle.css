@@ -184,5 +184,13 @@ body .profilepic {
     
     }
     
+    #video, #canvas {
+        margin-left: -250px;
+    }
+
+    /* #canvas {
+        margin
+    } */
 
 }
+

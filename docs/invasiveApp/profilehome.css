@@ -88,3 +88,15 @@ div.gallery {
     margin-left: 25px;
     /* padding-right: 25px; */
   }
+
+#shortbio {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:italic;
+    font-size: 1em;
+    color:rgb(0, 122, 230);
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(35, 174, 255), rgb(49, 0, 139));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(42, 0, 139);
+}
