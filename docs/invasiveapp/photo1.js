@@ -8,9 +8,22 @@ function mousePressed() {
     }
 }
 
-let player = new Tone.Player("https://netart.skwampus.com/assets/gulps.mp3").toDestination();
-player.loop = true;
+window.addEventListener('blur', function () {
+    // document.title = 'not focused';
+    console.log('not focused');
+    Tone.Transport.pause();
+}, true);
+
+window.addEventListener('focus', function () {
+    // document.title = 'focused';
+    console.log('focused');
+    Tone.Transport.start();
+}, true);
+
+let player = new Tone.Player("https://netart.skwampus.com/assets/californiadreamin.mp3").toDestination();
 player.autostart = true;
+
+player.sync().start(0);
 
 let wave;
 
